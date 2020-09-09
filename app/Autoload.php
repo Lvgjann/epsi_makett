@@ -40,3 +40,7 @@ $Site = new Site(
 if(isset($_POST['login'])){
     $error = User::login($_POST['identifiant'], $_POST['password']);
 }
+
+if(isset($_SESSION['user'])){
+    $user = new User($_SESSION['user']);
+}

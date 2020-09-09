@@ -9,13 +9,14 @@ class User
     private $password;
     private $id_group;
 
-    public function __construct($nom, $prenom, $photo, $password, $id_group)
+    public function __construct($user_id)
     {
-        $this->nom = $nom;
-        $this->prenom = $prenom;
-        $this->photo = $photo;
-        $this->password = $password;
-        $this->id_group = $id_group;
+        $user = Database::query('SELECT * FROM utilisateur WHERE id = ?', true, [$user_id], true);
+        $this->nom = $user['nom'];
+        $this->prenom = $user['prenom'];
+        $this->photo = $user['photo'];
+        $this->password = $user['photo'];
+        $this->id_group = $user['id_groupe'];
     }
 
     public static function login($login, $password){
