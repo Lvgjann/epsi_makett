@@ -32,7 +32,7 @@ class User
             );
 
             if(!empty($user)){
-                $_SESSION = $user['id'];
+                $_SESSION['user'] = $user['id'];
                 header('location: index.php');
             }
             return 'Mauvais identifiants.';
