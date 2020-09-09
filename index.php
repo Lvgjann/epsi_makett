@@ -1,8 +1,8 @@
 <?php 
 require('app/Autoload.php')
-if(empty($_SESSION['user'])){
+/*if(empty($_SESSION['user'])){
 	header('location: connexion.php');
-}
+}*/
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,10 +31,10 @@ if(empty($_SESSION['user'])){
 					<div class="row">
 						<ul id="sidebarList">
 							<li >
-						    	<a class="SidebarComponent" href="#">Acceuil</a>
+						    	<a class="SidebarComponent" href="index.php">Acceuil</a>
 						  	</li>
 						  	<li >
-						   		<a class="SidebarComponent" href="#">Administration</a>
+						   		<a class="SidebarComponent" href="#">Déconnexion</a>
 						  	</li>
 				  		</ul>
 					</div>
@@ -54,7 +54,9 @@ if(empty($_SESSION['user'])){
 					  	</li>
 				  	</ul>		
 				</div>
-				
+					 <div class="form-group">
+					    <textarea class="form-control" id="exampleFormControlTextarea1" rows="7" placeholder="Quoi de neuf ?"></textarea>
+					 </div>
 					<div class="panel panel-danger"></div>
 					<div class="panel-heading">
 						<h3 class="panel-title"><i class="fa fa-twitter-square" aria-hidden="true"></i>
