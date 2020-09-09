@@ -1,3 +1,9 @@
+<?php
+require('app/Autoload.php');
+if(empty($_SESSION['user'])){
+    header('location: connexion.php');
+}
+?>
 <!DOCTYPE html>
 <html>
 <title>Acceuil</title>

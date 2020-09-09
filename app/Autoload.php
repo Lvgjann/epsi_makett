@@ -30,13 +30,13 @@ $Site = new Site(
     array(
         'siteName' => 'MicroBlog',
         'siteLink' => 'http://localhost:6565/',
-        'sqlHost' => 'localhost',
+        'sqlHost' => 'mysql',
         'sqlName' => 'microblog',
         'sqlUser' => 'root',
         'sqlPassword' => 'root'
     )
 );
 
-if(empty($_SESSION['user'])){
-    header('location: connexion.php');
+if(isset($_POST['login'])){
+    $error = User::login($_POST['identifiant'], $_POST['password']);
 }

@@ -1,13 +1,8 @@
 <?php
-namespace lambda;
-use PDO;
-use Exception;
-use Site;
 
 /**
  * Class Database
  * Permet de gérer les requêtes avec la base de donnée
- * @package lambda
  */
 class Database extends Site{
     /**
