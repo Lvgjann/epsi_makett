@@ -34,7 +34,8 @@ img#userimage{
 
 .HeadBar {
 	padding-left: 0	;
-	/*float: right; */
+	background-color: #eeeded;
+
 }
 .col-md-4 {
 	position: relative;
